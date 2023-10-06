@@ -19,21 +19,12 @@ android {
             useSupportLibrary = true
         }
     }
-    signingConfigs {
-        create("release") {
-            keyAlias = "testFriendApp"
-            keyPassword = "on6sh8PqXdappFrD"
-            storeFile = file("D:\\krzysko\\android\\testKeystoreDir\\testKeystore.jks")
-            storePassword = "on6sh8PqXd"
-        }
-    }
 
     buildTypes {
         release {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
-                signingConfig = signingConfigs.getByName("release")
         }
     }
     compileOptions {
